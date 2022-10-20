@@ -40,4 +40,7 @@ public class Final {
     public static final int SIGN_UP_HEIGHT = 70;
     public static final char ASCII_CODE33 = '!';
     public static final char ASCII_CODE47 = '/';
+    public static final int MINIMUM_PASSWORD_LENGTH = 8;
+    public static final int SIZE_TEXT = 20;
+    public static final int SLLEP = 3000;
 }

@@ -27,27 +27,24 @@ public class MainPanel extends JPanel {
         this.add(new JLabel(imageIcon));
         welcome();
         createLogin();
-
-
-//        this.add(new ImagePanel(Final.X_AND_Y, Final.X_AND_Y, Final.WINDOW_WIDTH, Final.WINDOW_HEIGHT));
     }
 
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
-        this.imageIcon.paintIcon(this, graphics, 0, 0);
+        this.imageIcon.paintIcon(this, graphics, Final.X_AND_Y, Final.X_AND_Y);
     }
 
     public void welcome() {
         System.out.println("welcome");
         JLabel welcome = new JLabel("Welcome to the luma website");
         welcome.setBounds(Final.WELECOME_X, Final.WELECOME_Y, Final.WELECOME_WIDTH, Final.WELECOME_HEIGHT);
-        welcome.setFont(new Font("Serif", Font.BOLD, 20));
+        welcome.setFont(new Font("Serif", Font.BOLD, Final.SIZE_TEXT));
         welcome.setForeground(Color.black);
         this.add(welcome);
 
         JLabel welcome2 = new JLabel("Please login to continue");
         welcome2.setBounds(Final.WELECOME_X, Final.WELECOME2_Y, Final.WELECOME2_WIDTH, Final.WELECOME2_HEIGHT);
-        welcome2.setFont(new Font("Serif", Font.BOLD, 20));
+        welcome2.setFont(new Font("Serif", Font.BOLD, Final.SIZE_TEXT));
         welcome2.setForeground(Color.black);
         this.add(welcome2);
     }
@@ -76,13 +73,13 @@ public class MainPanel extends JPanel {
 
         JLabel instruction = new JLabel("After each text box typed, please press enter");
         instruction.setBounds(Final.INSTRUCTION_X, Final.INSTRUCTION_Y, Final.INSTRUCTION_WIDTH, Final.INSTRUCTION_HEIGHT);
-        instruction.setFont(new Font("Serif", Font.BOLD, 20));
+        instruction.setFont(new Font("Serif", Font.BOLD, Final.SIZE_TEXT));
         instruction.setForeground(Color.black);
         this.add(instruction);
 
         this.signUp = new JButton("Sign up");
         signUp.setBounds(Final.SIGN_UP_X, Final.SIGN_UP_Y, Final.SIGN_UP_WIDTH, Final.SIGN_UP_HEIGHT);
-        signUp.setFont(new Font("Serif", Font.BOLD, 20));
+        signUp.setFont(new Font("Serif", Font.BOLD, Final.SIZE_TEXT));
         signUp.setForeground(Color.black);
         this.add(signUp);
 
@@ -120,7 +117,7 @@ public class MainPanel extends JPanel {
                 try {
                     openingWebsite.makingPurchase();
                     openingWebsite.buyProduct();
-                }catch (Exception ex){
+                } catch (Exception ex) {
                     throw new RuntimeException(ex);
                 }
             }

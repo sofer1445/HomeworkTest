@@ -22,8 +22,7 @@ public class Tests {
                     && this.EMAIL.indexOf("com") > this.EMAIL.indexOf(".")) {
                 System.out.println("correct email");
                 legal = true;
-            }
-            else {
+            } else {
                 JOptionPane.showMessageDialog(null, "Please enter a valid email");
                 legal = false;
             }
@@ -39,7 +38,7 @@ public class Tests {
         boolean strong = false;
         int count = 0;
         try {
-            if (this.PASSWORD.length() >= 8) {
+            if (this.PASSWORD.length() >= Final.MINIMUM_PASSWORD_LENGTH) {
                 if (lowerCase()) {
                     count++;
                 }
@@ -52,13 +51,13 @@ public class Tests {
                 if (specialCharacter()) {
                     count++;
                 }
-            }else {
+            } else {
                 JOptionPane.showMessageDialog(null, "Please enter a password with at least 8 characters");
             }
             if (count >= 3) {
                 System.out.println("strong password");
                 strong = true;
-            }else {
+            } else {
                 JOptionPane.showMessageDialog(null, "Please enter a password with at least 3 of the following: lower case, upper case, number, special character");
                 strong = false;
             }
@@ -75,7 +74,7 @@ public class Tests {
             if (this.PASSWORD.equals(this.PASSWORD_VERIFICATION)) {
                 System.out.println("correct password");
                 legal = true;
-            }else {
+            } else {
                 JOptionPane.showMessageDialog(null, "Please enter the same password");
                 legal = false;
             }

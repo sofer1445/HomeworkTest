@@ -23,7 +23,7 @@ public class OpeningWebsite extends JPanel {
 
     public void sleep() {
         try {
-            Thread.sleep(3000);
+            Thread.sleep(Final.SLLEP);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -45,7 +45,8 @@ public class OpeningWebsite extends JPanel {
         submitButton.click();
         sleep();
     }
-    public void makingPurchase(){
+
+    public void makingPurchase() {
         System.out.println("makingPreschase");
         try {
             WebElement whatNew = driver.findElement(By.id("ui-id-3"));
@@ -71,6 +72,7 @@ public class OpeningWebsite extends JPanel {
             System.out.println("the product is not available");
         }
     }
+
     public void buyProduct() {
         sleep();
         WebElement cart = driver.findElement(By.cssSelector("a[href='https://magento.softwaretestingboard.com/checkout/cart/']"));
@@ -91,8 +93,6 @@ public class OpeningWebsite extends JPanel {
         WebElement shippingMethod = driver.findElement(By.cssSelector("input[value='flatrate_flatrate']"));
         shippingMethod.click();
         sleep();
-//        driver.findElement(By.cssSelector("button[data-role='opc-continue']")).click();
-//        sleep();
         driver.findElement(By.cssSelector("button[data-role='opc-continue']")).click();
         sleep();
         driver.findElement(By.cssSelector("button[title='Place Order']")).click();
