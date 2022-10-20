@@ -1,3 +1,6 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,7 +17,6 @@ public class MainPanel extends JPanel {
     private String mailText;
     private String passwordText;
     private String passwordVerificationText;
-//    private Tests tests;
 
     public MainPanel(int x, int y, int width, int height) {
         this.setBounds(x, y, width, height);
@@ -115,43 +117,17 @@ public class MainPanel extends JPanel {
                 } catch (InterruptedException ex) {
                     throw new RuntimeException(ex);
                 }
+                try {
+                    openingWebsite.makingPurchase();
+                    openingWebsite.buyProduct();
+                }catch (Exception ex){
+                    throw new RuntimeException(ex);
+                }
             }
-//            OpeningWebsite openingWebsite = new OpeningWebsite();
-//            openingWebsite.setVisible(true);
-//            openingWebsite.sleep();
-//            try {
-//                openingWebsite.createAnAccount();
-//            } catch (InterruptedException ex) {
-//                throw new RuntimeException(ex);
-//            }
-//            try {
-//                openingWebsite.personalInformation(firstNameText, lastNameText, mailText, passwordText, passwordVerificationText);
-//            } catch (InterruptedException ex) {
-//                throw new RuntimeException(ex);
-//            }
 
         });
 
     }
 
-//    public boolean allAddListener() {
-//        mail.addActionListener(e -> {
-//            this.mailText = mail.getText();
-//            System.out.println(this.mailText);
-//        });
-//        password.addActionListener(e -> {
-//            this.passwordText = password.getText();
-//            System.out.println(this.passwordText);
-//        });
-//        passwordVerification.addActionListener(e -> {
-//            this.passwordVerificationText = passwordVerification.getText();
-//            System.out.println(this.passwordVerificationText);
-//        });
-//        Tests tests = new Tests(mailText, passwordText, passwordVerificationText);
-//        if (tests.correctEmail() && tests.correctPassword() && tests.strongPassword()) {
-//            return true;
-//        }
-//        return false;
-//    }
 
 }

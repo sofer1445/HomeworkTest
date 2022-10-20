@@ -38,6 +38,6 @@ public class Final {
     public static final int SIGN_UP_Y = INSTRUCTION_Y;
     public static final int SIGN_UP_WIDTH = 100;
     public static final int SIGN_UP_HEIGHT = 70;
-    public static final int ASCII_37 = 37;
-    public static final int ASCII_47 = 47;
+    public static final char ASCII_CODE33 = '!';
+    public static final char ASCII_CODE47 = '/';
 }

@@ -17,7 +17,9 @@ public class Tests {
         System.out.println("correctEmail: start");
         boolean legal = false;
         try {
-            if (this.EMAIL.contains("@") && this.EMAIL.contains(".")) {
+            if (this.EMAIL.contains("@") && this.EMAIL.contains(".")
+                    && this.EMAIL.indexOf("@") < this.EMAIL.indexOf(".")
+                    && this.EMAIL.indexOf("com") > this.EMAIL.indexOf(".")) {
                 System.out.println("correct email");
                 legal = true;
             }
@@ -113,8 +115,8 @@ public class Tests {
 
     public boolean specialCharacter() {
         for (int i = 0; i < this.PASSWORD.length(); i++) {
-            if (this.PASSWORD.charAt(i) >= Final.ASCII_37 && this.PASSWORD.charAt(i) <= Final.ASCII_47) {
-                return false;
+            if ((this.PASSWORD.charAt(i) == '@') || (this.PASSWORD.charAt(i) >= Final.ASCII_CODE33 && this.PASSWORD.charAt(i) <= Final.ASCII_CODE47)) {
+                return true;
             }
         }
         return false;
