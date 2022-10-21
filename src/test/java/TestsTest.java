@@ -11,7 +11,7 @@ class TestsTest {
     }
 
     @Test
-    void checksIfThePasswordIsStrongEnough() {
+    void checksIfThePasswordsMatch() {
         Tests tests = new Tests("123456", "S1212ss", "S1212ss");
         assertTrue(tests.correctPassword());
 

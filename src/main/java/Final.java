@@ -6,7 +6,6 @@ public class Final {
     public static final int WELECOME_Y = 0;
     public static final int WELECOME_WIDTH = 500;
     public static final int WELECOME_HEIGHT = 100;
-    public static final int WELECOME2_X = WELECOME_X ;
     public static final int WELECOME2_Y = WELECOME_Y + WELECOME_HEIGHT;
     public static final int WELECOME2_WIDTH = 500;
     public static final int WELECOME2_HEIGHT = 100;
